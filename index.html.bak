@@ -449,6 +449,7 @@ let finalMessageShown = false;
 
         // Эффект взрыва с медленными частицами
         function explodeObject(element) {
+		new Audio("boom.mp3").play();
             const rect = element.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;

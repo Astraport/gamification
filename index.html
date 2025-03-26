@@ -449,6 +449,7 @@ let finalMessageShown = false;
 
         // Эффект взрыва с медленными частицами
         function explodeObject(element) {
+		new Audio("boom.mp3").play();
             const rect = element.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
@@ -494,7 +495,7 @@ let finalMessageShown = false;
                     
                     requestAnimationFrame(animate);
                 };
-                new Audio("boom.mp3").play()
+                
                 requestAnimationFrame(animate);
             }
         }
@@ -568,12 +569,12 @@ let finalMessageShown = false;
 			}
             
             message.style.display = "block";
-            
+            var tvalue = (remaining == 2)?5000:2500;
             setTimeout(() => {
                 if (!finalMessageShown) {
                     message.style.display = "none";
                 }
-            }, 3000);
+            }, tvalue);
         }
         
         // Финальное сообщение с кнопками (не закрывается автоматически)
