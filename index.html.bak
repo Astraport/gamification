@@ -494,7 +494,7 @@ let finalMessageShown = false;
                     
                     requestAnimationFrame(animate);
                 };
-                new Audio("boom.mp3").play()
+                
                 requestAnimationFrame(animate);
             }
         }
